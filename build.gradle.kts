@@ -3,6 +3,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.25"
 	kotlin("plugin.jpa") version  "1.9.25"
 	id("org.springframework.boot") version "3.4.3"
+	id ("com.netflix.dgs.codegen") version "7.0.3"
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -58,4 +59,12 @@ kotlin {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+tasks.generateJava {
+	language ="kotlin"
+	packageName = "com.moview"
+	typeMapping = mutableMapOf(
+		"ID" to "Long"
+	)
 }
