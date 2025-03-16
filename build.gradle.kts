@@ -33,6 +33,9 @@ dependencies {
 	implementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter")
 	implementation("com.netflix.graphql.dgs:graphql-dgs-extended-scalars")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	runtimeOnly("com.h2database:h2")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("com.netflix.graphql.dgs:graphql-dgs-spring-graphql-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
